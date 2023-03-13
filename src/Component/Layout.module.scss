@@ -1,3 +1,5 @@
+@import "./Mixin/Mixin";
+@import "./Mixin/Variable";
 $background-color: black;
 $colorbodytext: white;
 
@@ -39,12 +41,42 @@ main {
 footer {
   width: 100%;
   background-color: #191b1e;
-  height: 49vh;
+  @include xs {
+    height: 50vh;
+  }
+  @include sm {
+    height: 31vh;
+  }
+  @include md {
+    height: 15vh;
+  }
   div {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-
+    @include xs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    @include md {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+    }
+    @include lg {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+    }
     h3 {
       margin: 25px;
     }
